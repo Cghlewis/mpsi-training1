@@ -1,2 +1,1 @@
-# mpsi-training1
-Training1
+Data management in large-scale education research training: Training 1: Setting up Data Systems
