@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Data Management in Large-Scale   Education Research</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Crystal Lewis" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <script src="libs/kePrint/kePrint.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Data Management in Large-Scale <br> Education Research
+## <br> Setting up Your Data Systems: Documentation
+### Crystal Lewis
+### Missouri Prevention Science Institute
+### 09/22/2020 (updated: 09/22/2020)
+
+---
+
+
+
+
+
+# So you were just awarded a grant.......
+
+--
+
+&lt;img src="img/625955-whats-next-meme.jpg" width="400" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# About this training series
+
+&lt;br&gt;
+
+* IES has a policy on providing access to your data at the conclusion of projects funded through their research centers (*Exploration* or *Initial Efficacy and Follow-Up* grants). 
+
+&lt;br&gt;
+
+* The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application.
+
+&lt;br&gt;
+
+
+* This training series is not how to write a DMP, but how to successfully **implement** one!
+
+---
+
+# Replication crisis
+
+
+&lt;img src="img/reproducibility-graphic-online1.jpeg" width="70%" style="display: block; margin: auto;" /&gt;
+
+Source: [Nature](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970#/b1)
+
+---
+
+# Solution: Implement Good DMPs
+
+* Type of data to be shared
+
+* Procedures for managing and maintaining confidentiality
+
+* Roles and responsibilities of project staff in the management of research data  
+
+* Expected schedule for data sharing  
+
+* Format of the final dataset 
+
+* &lt;span style="color: #D35400; "&gt;Documentation to be provided&lt;/span&gt; 
+
+* Method of data sharing  
+
+* Explanation of possible data sharing agreement  
+
+* Any circumstances that prevent any data from being shared  
+
+* A plan for pre-registering your study
+
+Source: [IES](https://ies.ed.gov/funding/datasharing_implementation.asp)
+
+---
+
+# A data file with no documentation
+
+What questions do you have?
+
+&lt;table class="table table-striped" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; ID &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cohort &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; treatment &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca1_fall &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca2_fall &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca1v1_spring &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca2_spring &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+--
+
+What was the intervention?
+
+--
+
+Who are the subjects? How were they chosen?
+
+--
+
+How was this data collected? Survey?
+
+--
+
+What years were data collected?
+
+---
+
+# Questions
+
+&lt;table class="table table-striped" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; ID &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cohort &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; treatment &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca1_fall &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca2_fall &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca1v1_spring &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; toca2_spring &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 10 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 15 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;br&gt;
+--
+
+How are the variables coded? What is 0 vs 1?
+
+--
+
+What is the question text for toca1?
+
+--
+
+Why is there a different version of toca1 in the spring?
+
+--
+
+Were there any manipulations done on this data?
+
+---
+
+# Solution: Document everything!
+
+&lt;br&gt;
+
+&lt;img src="img/dog.gif" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# Documentation
+
+&lt;br&gt;
+
+--
+* Track decisions/changes made throughout the life cycle of the project
+
+--
+
+* Make our decisions/analyses replicable   
+
+--
+
+* Clean our data with fidelity  
+
+--
+
+* Ensure others use and interpret our data accurately
+
+--
+
+* Discover errors in our data  
+
+--
+
+* Allows others to find our archived data through metadata
+
+---
+
+# Documentation
+
+&lt;br&gt;
+
+IES states your documentation "should be a comprehensive and stand-alone document that includes all the information necessary to replicate the analysis performed by the original research team" and should include:
+
+--
+
+* a summary of the purpose of the data collection  
+
+--
+
+* methodology and procedures used to collect the data  
+
+--
+
+* timing of the data collection  
+
+--
+
+* details of the data codes, definition of variables, variable field locations, and frequencies 
+
+&lt;br&gt;
+
+
+Source: [IES](https://ies.ed.gov/funding/datasharing_implementation.asp)
+
+---
+
+# Types of documentation
+
+1. **Protocol**
+
+1. **Wiki**
+
+1. **Data dictionary**
+
+1. **Codebook**
+
+1. **README**
+
+1. **Metadata**
+
+1. **Miscellaneous**
+
+---
+
+# Protocol
+
+A document/s to record all your procedures and changes made to those procedures throughout the grant.
+
+Should cover procedures/decisions for the following:
+
+* Participant recruitment
+* Consent and assent
+* Participant selection
+* Randomization and blinding/unblinding
+* Data collection (including correspondence to set up data collection)
+* Staff training
+* Data entry, data retrieval, data scoring
+* Payments/Incentives
+* Intervention implementation
+
+---
+
+# Protocol
+
+Each protocol should begin with:
+
+* Date the protocol was made   
+* Who made the protocol  
+* Any rationale behind the protocol  
+* Any related documents or research behind this protocol  
+* For any changes to the protocol after the project has begun add the following below the original protocol   section:  
+  + Revision Date  
+  + Who decided on the revision  
+  + Any rationale behind the revision  
+  + Any related documents or research behind the revision
+  
+---
+
+# Example protocol
+
+![](img\protocol.PNG)
+
+Source: [Jessica Logan](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)
+
+---
+
+# Wiki
+
+*A site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together.*
+
+* Easily built in tools such as Microsoft SharePoint and Teams
+
+* Think Wikipedia: anyone on your team can add/edit content and then can link to those documents for easy access
+
+* Great for housing frequently used information (ex: Recruitment Information)
+
+* Also great for housing data management rules (ex: file naming conventions or folder structure)
+
+---
+
+# Example wiki
+
+&lt;img src="img/wiki.PNG" width="80%" style="display: block; margin: auto;" /&gt;
+
+Source: [Sharepoint](https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32) and [Slite](https://slite.com/blog/post/how-to-build-a-company-wiki-that-doesnt-suck)
+
+---
+
+# Data dictionary
+
+--
+* Captures all relevant variable level information
+
+--
+
+* Should be started before data collection begins and updated throughout the study
+
+--
+
+* Usually kept in rectangular format and each variable has its own row (ex: spreadsheet form)
+
+--
+
+Should capture information such as:
+
+* Variable Name  
+* Variable Label  
+* Exact question text  
+* Value range or Value codes  
+* Measurement unit (Ex: numeric, string, date)  
+* How is missing data coded  
+* Variable universe (Who gets this question, Is it skipped for some people)  
+* What time periods/years does this variable exist  
+* Notes (such as versions/changes to this variable)  
+* Summary statistics 
+* Also consider grouping variables by measure
+
+---
+
+# Data dictionary
+
+To **start** a data dictionary, you should gather the following information:
+
+* What data are we collecting? 
+
+* What are the questions/measures included in the surveys?
+
+* What is your variable naming protocol?
+  + Have you used the question/measure before? If yes, keep the variable name the same across projects.
+  + Variable naming convention for survey questions is ScaleName# (Ex: toca1, toca2, toca3)
+    + Make a rule for versioning
+      + Ex: Add "v2" on revised questions (toca1v2)
+  + Be consistent with capitalization (ex: always using lowercase)
+  + Be consistent with delimiters (ex: use snakecase or camel case)
+    + Camel case (TocaConcentration)
+    + Snake case (toca_concentration)
+  + No spaces or special characters in variable names
+  + Make sure all variable names are unique
+  + Names should be meaningful but concise
+
+---
+
+# Data dictionary
+
+&lt;br&gt;
+
+* Do our measures have value coding rules or can we assign our own?
+
+* Are we collecting data over time? What is our Cohort/Year/Time variable protocol?
+  + If you plan to collect multiple time points of data and merge data in a wide format, you will need a time prefix or suffix on your variables (ex: toca1_T1 or toca1_Fall)
+  + If you plan to track a cohort over multiple years in wide format, you may need a second prefix or suffix (ex: toca1_Year1_T1)
+  + If you plan to merge data in long format, time can be their own variables (Ex: Time, Year, Cohort)
+
+---
+
+# Example data dictionary
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+![](https://media.screensteps.com/image_assets/assets/001/878/671/original/8fbcc565-602f-4ac6-b828-2eaaeb67578b.png)
+---
+
+# Codebook
+
+Similar to data dictionary, captures variable as well as some project level information
+  * Usually in .txt, .pdf, or .xml format
+  * I view the codebook as a document to summarize the final datasets
+  * Several stat programs (R, SPSS, SAS and Stata) will export simple codebooks for your final datasets.
+
+* Captures things like:
+  + Project info (Title, PI)  
+  + Variable level details  
+    + Variable name  
+    + Variable label  
+    + Question text  
+    + Coded values (1,2,3,4)  
+    + Value labels (Excellent, Good, Fair, Poor)  
+    + Summary statistics  
+    + Missing data values  
+    + Skip patterns  
+    + Notes  
+    + If data is in text format, indicate position of each variable
+
+---
+
+# Codebook
+
+Other optional content for a codebook: 
+
+* Data collection instruments 
+* Consent agreements
+* Computations and/or imputations
+* Methodological details  
+* Related publications  
+* Flowchart of data collection instruments 
+
+&lt;img src="img/flowchart.PNG" width="40%" style="display: block; margin: auto;" /&gt;
+
+Source: [DDI](https://ddialliance.org/sites/default/files/EnablingLongitudinalDataComparisonUsingDDI.pdf)
+---
+
+# Example codebook
+
+&lt;img src="img/codebook.PNG" width="90%" style="display: block; margin: auto;" /&gt;
+
+&lt;br&gt;
+
+Source: [NLS](https://www.nlsinfo.org/site/nlsy97/nlsdocs/nlsy97/codesup/maincstoc.html)
+
+---
+
+# Another example codebook
+
+![](img\codebook2.PNG)
+
+---
+
+# README
+
+As the name implies, read this first before proceeding
+* Plain text file in .txt, .md, .pdf, .xml format
+* One README per dataset
+* Helps others interpret your data
+
+&lt;br&gt;
+
+A README can capture the following:  
+
+* Project level information
+* File information
+* Sharing/Access information
+* Methodology
+* Codebook (you can include your .txt codebook in this document for instance)
+
+---
+
+# Example README
+
+&lt;br&gt;
+&lt;br&gt;
+
+![](img/README.PNG)
+
+Source: [Coding2Share](https://coding2share.github.io/ReproducibilityToolkit/Mod4Document.html)
+
+---
+
+# Metadata: Data about data
+
+* IES states "Metadata provide information about the dataset to help people find, understand, and use your data". 
+
+In education there are generally two types of metadata: Project-level and File-level.
+
+--
+
+.pull-left[
+**Project-level includes fields such as**:
+* Title
+* Description
+* Keywords
+* Coverage (spatial and temporal)
+* Contacts
+* Funders
+* Language
+* DOI
+]
+
+.pull-right[
+**File-level includes fields such as**:
+* File name
+* File format
+* Software used to create the files
+* Date of creation/ update
+* Relationships between files
+]
+
+---
+
+# Metadata
+
+* Many fields have metadata standards (a formally agreed upon structure, format, vocabulary, etc.)
+  
+* Education does **not** currently have metadata standards and IES recommends making "notation as interpretable as possible"
+  
+* IES suggests embedding metadata in other documents such as your README.
+  
+  * However, if you plan to use a data repository, they may have standards in place
+    + Consult your repository website for detailed information on what is required for archival
+
+&lt;br&gt;
+
+  
+Source: [IES](https://ies.ed.gov/funding/datasharing_faq.asp)
+
+---
+
+# Miscellaneous
+
+* Document **all** data protocols and processes. You will regret it if you don't
+
+* It may fit into an already mentioned file type (README, protocol, wiki), if not, choose whatever works for you (ex: syntax, Word, or Excel file)
+
+* Save these documents in the content folder and name appropriately
+  + Ex: `README_Name-of-process.txt`
+  
+&lt;br&gt;
+
+.pull-left[
+* **Some Examples:**
+  
+  1. File origination information
+  1. Input/output cleaning process
+  1. Input/output product process
+  1. Data protocols
+  ]
+
+.pull-right[
+&lt;img src="img/README2.png" width="704" style="display: block; margin: auto;" /&gt;
+]
+
+Source: [Michigan](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/154114/Personal%20README%20Files-%20User%20Manuals%20for%20Library%20Staff.pdf?sequence=1)
+
+---
+
+# Example Miscellaneous file
+
+This is a great example of a process file, titled `README_Illinois_Data_Bank_Archive_2018-03-08.txt`
+
+&lt;img src="img/misc.PNG" width="80%" style="display: block; margin: auto;" /&gt;
+
+Source: [Wisconsin](https://researchdata.wisc.edu/wp-content/uploads/2019/04/README_Illinois_Data_Bank_Archive_2018-03-08.txt)
+
+---
+
+# Example Miscellaneous file
+
+Another great example of documenting a data process in a README, even if it doesn't involve syntax
+
+![](img\misc2.PNG)
+
+Source:[North Carolina](https://files.nc.gov/dpi/documents/program-monitoring/directory/readme.txt)
+
+---
+
+# Example Miscellaneous file
+
+Another data process file but this one is kept in an R syntax file.
+
+![](img\misc2.PNG)
+
+Source:[Sharla Gelfand](https://sharstudioconf.netlify.app/#22)
+
+---
+
+# Examle Miscellanous file
+
+And just to get the point across that the format is so much less important than just keeping the documentation, here is another example of process file in Excel.
+
+![](img\misc4.PNG)
+
+---
+
+# Takeaway
+
+* Document everything
+  + What might you need to remember in the future
+  + What will others need to know to use your data in the future
+* Try to standardize as much as you can
+* Don't over worry about the file type or format
+  + Try to use non-proprietary software
+  + But if you use Word or Excel, it's not the end of the world
+
+---
+
+# Continuing the learning
+
+
+All materials for this training series will be housed here: https://cghlewis.github.io/mpsi-data-training/
+
+Next training on *Setting up Your Data Structures* will be Friday 10/23/2020 at 2pm
+
+&lt;img src="img/ee3508d5bf9727d7ccd7b4e978436d20.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
