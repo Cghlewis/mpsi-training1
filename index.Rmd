@@ -52,6 +52,19 @@ knitr::include_graphics("img/lots-of-data.jpg")
 
 ```
 
+
+---
+
+# Research Life Cycle
+
+```{r, echo=FALSE, fig.align="center", out.width='60%'}
+knitr::include_graphics("img/lifecycle2.png")
+
+```
+
+Source: [OSF](https://osf.io)  
+Source: [Jessica Logan, Ph.D](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)
+
 ---
 
 # Replication crisis
@@ -314,7 +327,7 @@ For any *changes* to the protocol after the project has begun add the following 
 
 ![](img\protocol.PNG)
 
-Source: [Jessica Logan](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)
+Source: [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)
 
 ---
 
