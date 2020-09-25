@@ -622,7 +622,7 @@ Source: [Coding2Share](https://coding2share.github.io/ReproducibilityToolkit/Mod
 .pull-right[  
 ```{r, echo=FALSE, fig.align="center"}
 
-knitr::include_graphics("img/metadata.png")
+knitr::include_graphics("img/metadata.PNG")
 
 ```
 ]
@@ -698,7 +698,7 @@ Source: [IES](https://ies.ed.gov/funding/datasharing_faq.asp)
 .pull-right[
 ```{r, echo=FALSE, fig.align="center"}
 
-knitr::include_graphics("img/README2.png")
+knitr::include_graphics("img/README2.PNG")
 
 ```
 ]
