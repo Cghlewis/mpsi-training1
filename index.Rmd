@@ -349,9 +349,7 @@ Source: [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and
   + Information that is relevant across research projects (ex: file naming conventions or folder structure conventions)
 
 <br>
-<br>
-<br>
-<br>
+
 
 Source: [SharePoint](https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32) and [Education Data Chat](https://www.buzzsprout.com/1074286/5185513-episode-5-organizing-shared-network-drives-tips-and-tricks)
 
