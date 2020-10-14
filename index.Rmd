@@ -565,6 +565,16 @@ Source: [Coding2Share](https://coding2share.github.io/ReproducibilityToolkit/Mod
 
 ---
 
+# One more example codebook
+
+```{r, echo=FALSE, fig.align="center", out.width='50%'}
+
+knitr::include_graphics("img/codebook3.PNG")
+
+```
+
+---
+
 # README
 
 As the name implies, read this first before proceeding
