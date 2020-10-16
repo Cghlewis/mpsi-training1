@@ -62,7 +62,7 @@ knitr::include_graphics("img/lifecycle2.png")
 
 ```
 
-Source: [OSF](https://osf.io) and [Jessica Logan, Ph.D](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)
+Source: [Center for Open Science](https://www.cos.io/) and [Jessica Logan, Ph.D](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)
 
 ---
 
