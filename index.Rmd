@@ -112,12 +112,12 @@ What questions do you have?
 ID <-c(seq(5,25,5))
 cohort <- c(1,1,2,2,2)
 treatment <- c(0,0,1,1,0)
-toca1_fall <- c(1,2,3,3,4)
-toca2_fall <- c(1,2,3,4,5)
-toca1v1_spring <- c(1,3,NA,4,4)
-toca2_spring <- c(1,3,5,5,5)
+fall_toca1 <- c(1,2,3,3,4)
+fall_toca2 <- c(1,2,3,4,5)
+spring_toca1v1 <- c(1,3,NA,4,4)
+spring_toca2 <- c(1,3,5,5,5)
 
-df <- data.frame(ID, cohort, treatment, toca1_fall, toca2_fall, toca1v1_spring, toca2_spring)
+df <- data.frame(ID, cohort, treatment, fall_toca1, fall_toca2, spring_toca1v1, spring_toca2)
 
 df %>%
   kable("html") %>%
@@ -245,6 +245,8 @@ Source: [IES](https://ies.ed.gov/funding/datasharing_implementation.asp)
 
 1. **Protocol**
 
+1. **Style Guide**
+
 1. **Wiki**
 
 1. **Data dictionary**
@@ -332,6 +334,42 @@ Source: [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and
 
 ---
 
+# Style Guide
+
+* A set of standards around data management rules
+
+* It improves consistency within and across files and projects
+
+* Style Guide should provide guidance for:
+  + variable naming
+  + value coding
+  + file naming
+  + versioning rules
+  + file structure
+
+* Can be kept in any file format (.txt, .pdf, .md, etc.)
+  
+* You may have one style guide that applies to all projects (file structure, versioning rules, file naming), housed centrally on a wiki or as a README in a team folder
+
+* And one guide that applies specifically to each project (variable naming conventions, value coding), kept as a protocol or a README in a project folder
+
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Style_guide)
+
+---
+
+# Example Style Guide
+
+```{r, echo=FALSE, fig.align="center", out.width='90%'}
+
+knitr::include_graphics("img/style.PNG")
+
+```
+
+Source: [Bart van de Biezen](https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md)
+
+---
+
 # Wiki
 
 *A site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together.*
@@ -342,11 +380,11 @@ Source: [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and
 * Easily built in tools such as Microsoft SharePoint and Teams
 
 
-* You can make wikis specific to a project and house frequently used information (ex: Recruitment Information)
+* You can make wikis specific to a project and house frequently used information (ex: Recruitment Information, style guide)
 
 * Or a general research team wiki that houses 
   + Frequently requested information (ex: meeting notes or employee manual)
-  + Information that is relevant across research projects (ex: file naming conventions or folder structure conventions)
+  + Information that is relevant across research projects (ex: style guide)
 
 <br>
 
@@ -390,15 +428,15 @@ Should capture information such as:
 
 * Variable name  
 * Variable label as well as exact question text
+* Associated scale (if item belongs to a scale)
 * Value range or value codes ([1-99] or 0=No, 1=Yes) 
 * Measurement unit (Ex: numeric, string, date)  
 * Missing data codes 
 * Variable universe (who gets this question, is it skipped for some people)  
 * What time periods/years does this variable exist  
 * Notes (such as versions/changes to this variable)  
-* Summary statistics 
-* Calculations
-* Also consider grouping variables by measure
+* Calculations (composite variables, scores)
+* Group variables by measure (teacher survey, teacher interview, etc.)
 
 ---
 
@@ -408,11 +446,11 @@ To *start* a data dictionary, you should gather the following information:
 
 --
 
-* What data are we collecting? 
+* What measures are we collecting? 
 
 --
 
-* What are the questions/measures included?
+* What are the items/scales included?
 
 --
 
@@ -424,54 +462,11 @@ To *start* a data dictionary, you should gather the following information:
 
 --
 
-* Are we collecting data over time? 
-  + What is our Cohort/Year/Time variable protocol?
-  + Will time be its own variable or a prefix/suffix added to our variables?  
-      + Depends on how you plan to merge data over time (long vs wide)
-  + What do we want to name variables like Cohort, Year, or Time? 
-      + What do we want those values to be?
-  + What are our prefix/suffix conventions? (t1_toca2, toca2_fall)
+* Also consider variables we are assigning/calculating:
+  + IDs
+  + Time variables (cohort, year, time)
+  + Composite scores
 
----
-
-# Data dictionary
-
-Variable naming considerations:
-
---
-
-  + Have you used the question/measure before? 
-    + If yes, keep the variable name the same across projects.
-
---
-
-  + Variable naming convention for survey questions is ScaleName# (Ex: toca1, toca2, toca3)
-    + Make a rule for versioning
-      + Ex: Add "v2" on revised questions (toca1v2)
-      
---
-
-  + Be consistent with capitalization (ex: always using lowercase)
-  
---
-
-  + No spaces or special characters in variable names
-
---
-
-  + Be consistent with delimiters (ex: use camel case or snake case)
-    + Camel case (TocaConcentration)
-    + Snake case (toca_concentration)
-    
-  
---
-
-  + Make sure all variable names are unique
-  
---
-
-  + Names should be meaningful but concise (consider character limits)
-  
 ---
 
 # Example data dictionary
@@ -514,6 +509,8 @@ The main body captures variable level details:
 .pull-left[
 Other optional content for a codebook: 
 
+* Citations for scales used
+
 * Data collection instruments 
 
 * Consent agreements
@@ -522,17 +519,19 @@ Other optional content for a codebook:
 
 * Methodological details  
 
-* Flowchart of data collection instruments 
+* Flowchart of data collection instruments/screeners
+
+* Study timeline
 ]
 
 .pull-right[
 ```{r, echo=FALSE, fig.align="center"}
 
-knitr::include_graphics("img/flowchart.PNG")
+knitr::include_graphics("img/flowchart2.PNG")
 
 ```
 
-Source: [DDI](https://ddialliance.org/sites/default/files/EnablingLongitudinalDataComparisonUsingDDI.pdf)
+Source: [IES](https://nces.ed.gov/pubs2015/2015074.pdf)
 ]
 
 ---
@@ -573,15 +572,27 @@ knitr::include_graphics("img/codebook3.PNG")
 
 ```
 
+Source: [MPSI](http://moprevention.org/)
+
 ---
 
 # README
 
+.pull-left[
 As the name implies, read this first before proceeding
 * Plain text file in .txt, .md, .pdf, .xml format
 * One README per dataset
 * Helps others interpret your data
+]
 
+.pull-right[
+```{r, echo=FALSE, fig.align="center"}
+
+knitr::include_graphics("img/README2.PNG")
+
+```
+Source: [University of Michigan](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/154114/Personal%20README%20Files-%20User%20Manuals%20for%20Library%20Staff.pdf?sequence=1)
+]
 <br>
 
 A README can capture the following:  
@@ -691,29 +702,14 @@ Source: [IES](https://ies.ed.gov/funding/datasharing_faq.asp)
 * It may fit into an already mentioned file type (README, protocol, wiki), if not, choose whatever works for you (ex: syntax, Word, or Excel file)
 
 * Save these documents in the content folder and name appropriately
-  + Ex: `README_Name-of-process.txt`
   
+Examples of miscellaneous documents you may want to keep:
 
-.pull-left[
-**Some Examples:**
-  
-  1. File origination information
-  1. Input/output cleaning process
-  1. Input/output product process
-  1. Style guide (file naming conventions for example)
-  ]
+* File versioning information
+* Data cleaning plan
+* File flow (inputs and outputs)
+* Setup/process steps
 
-.pull-right[
-```{r, echo=FALSE, fig.align="center"}
-
-knitr::include_graphics("img/README2.PNG")
-
-```
-]
-
-<br>
-
-Source: [Michigan](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/154114/Personal%20README%20Files-%20User%20Manuals%20for%20Library%20Staff.pdf?sequence=1)
 
 ---
 
@@ -735,7 +731,7 @@ Source: [University of Helsinki](https://www.helsinki.fi/en/research/guide-for-d
 
 # Example Miscellaneous file
 
-This is a great example of a process file, titled `README_Illinois_Data_Bank_Archive_2018-03-08.txt`
+This is a great example of a flow/process file, titled `README_Illinois_Data_Bank_Archive_2018-03-08.txt`
 
 ```{r, echo=FALSE, fig.align="center", out.width='80%'}
 
@@ -761,7 +757,7 @@ Source:[State of North Carolina](https://files.nc.gov/dpi/documents/program-moni
 
 # Example miscellaneous file
 
-Another data process file but this one is kept in an R syntax file.
+Another data process file but this one is kept in an R syntax file
 
 ![](img\misc3.PNG)
 
@@ -773,26 +769,11 @@ Source:[Sharla Gelfand](https://sharstudioconf.netlify.app/#22)
 
 # Example miscellanous file
 
-And just to get the point across that the format is so much less important than just keeping the documentation, here is an example of an input/output process file in Excel
+And just to get the point across that the format is so much less important than just keeping the documentation, here is an example of an input/output flow file in Excel
 
 <br>
 
 ![](img\misc4.PNG)
-
----
-
-# Example miscellaneous file
-
-Last example, is keeping a style guide in a README file
-
-```{r, echo=FALSE, fig.align="center", out.width='80%'}
-
-knitr::include_graphics("img/misc5.PNG")
-
-```
-
-
-Source: [Bart van de Biezen](https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md)
 
 ---
 
@@ -818,7 +799,7 @@ Source: [Bart van de Biezen](https://github.com/bartvandebiezen/file-name-conven
 
 All materials for this training series will be housed here: https://cghlewis.github.io/mpsi-data-training/
 
-Next training on *Setting up Your Data Structures* will be Friday 10/30/2020? at 2pm
+Next training on *Setting up Your Data Structures* will be Friday 11/06/2020? at 2pm
 
 ```{r, echo=FALSE, fig.align="center", out.width='40%'}
 
