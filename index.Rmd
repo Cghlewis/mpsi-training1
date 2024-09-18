@@ -3,7 +3,7 @@ title: "Data Management in Large-Scale <br> Education Research"
 subtitle: "<br> Documentation"
 author: "Crystal Lewis"
 institute: "Missouri Prevention Science Institute"
-date: "09/25/2020 (updated: `r format(Sys.time(), '%m/%d/%Y')`)" 
+date: "09/25/2020" 
 output:
   xaringan::moon_reader:
     css: [default, metropolis]
@@ -473,9 +473,8 @@ To *start* a data dictionary, you should gather the following information:
 
 <br>
 <br>
-<br>
 
-![](https://media.screensteps.com/image_assets/assets/001/878/671/original/8fbcc565-602f-4ac6-b828-2eaaeb67578b.png)
+![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/6197cc3a0042a2708a127718/images/61d85ecda6a5ee76d8a2e488/8fbcc565-602f-4ac6-b828-2eaaeb67578b.png)
 ---
 
 # Codebook
